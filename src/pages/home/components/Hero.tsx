@@ -9,12 +9,12 @@ export default function Hero() {
           alt="종합 인력도급 전문기업 도급HR"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0F1B3D]/85 via-[#0F1B3D]/75 to-[#0F1B3D]/85"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65"></div>
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 w-full py-32">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center mt-[100px]">
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
             최적의 인력 솔루션,<br />도급HR이 함께합니다
