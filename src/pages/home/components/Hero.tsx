@@ -14,7 +14,7 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-[1440px] mx-auto px-6 lg:px-12 w-full py-32">
-        <div className="max-w-4xl mx-auto text-center mt-[100px]">
+        <div className="max-w-4xl mx-auto text-center mt-[150px]">
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
             최적의 인력 솔루션,<br />도급HR이 함께합니다
