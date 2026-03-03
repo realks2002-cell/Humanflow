@@ -23,7 +23,7 @@ export default function Navbar() {
             <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-[#C8A35F]">
               <i className="ri-team-line text-2xl text-white"></i>
             </div>
-            <span className="text-xl font-bold text-[#0F1B3D]">도급HR</span>
+            <span className="text-xl font-bold text-[#0F1B3D]">휴먼플로우</span>
           </div>
 
           {/* Navigation Links - Desktop */}

@@ -8,9 +8,9 @@ export default function Footer() {
             <div className="w-12 h-12 bg-[#C8A35F] rounded-lg flex items-center justify-center">
               <i className="ri-team-line text-2xl text-white"></i>
             </div>
-            <span className="text-2xl font-bold">도급HR</span>
+            <span className="text-2xl font-bold">휴먼플로우</span>
           </div>
-          <p className="text-gray-400">신뢰의 인력도급 파트너</p>
+          <p className="text-gray-400">필요한 인력, 필요한순간 (주)휴먼플로우</p>
         </div>
 
         {/* Main Footer Content */}
@@ -30,7 +30,7 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-bold mb-6">회사소개</h4>
             <ul className="space-y-3">
-              <li><a href="#about" className="text-gray-400 hover:text-[#C8A35F] transition-colors cursor-pointer">도급HR 소개</a></li>
+              <li><a href="#about" className="text-gray-400 hover:text-[#C8A35F] transition-colors cursor-pointer">휴먼플로우 소개</a></li>
               <li><a href="#testimonials" className="text-gray-400 hover:text-[#C8A35F] transition-colors cursor-pointer">고객 후기</a></li>
               <li><a href="#" className="text-gray-400 hover:text-[#C8A35F] transition-colors cursor-pointer">채용 안내</a></li>
               <li><a href="#" className="text-gray-400 hover:text-[#C8A35F] transition-colors cursor-pointer">공지사항</a></li>
@@ -54,15 +54,15 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="text-gray-400 flex items-center gap-2">
                 <i className="ri-phone-line text-[#C8A35F]"></i>
-                02-0000-0000
+                1644-5393
               </li>
               <li className="text-gray-400 flex items-center gap-2">
                 <i className="ri-mail-line text-[#C8A35F]"></i>
                 placeholder@doguphr.com
               </li>
-              <li className="text-gray-400 flex items-center gap-2">
-                <i className="ri-map-pin-line text-[#C8A35F]"></i>
-                서울특별시 OO구 OO로 000
+              <li className="text-gray-400 flex items-start gap-2">
+                <i className="ri-map-pin-line text-[#C8A35F] mt-1"></i>
+                경기도 화성시 동탄구 동탄산단6길 15-40, 3층302호(방교동)
               </li>
               <li className="text-gray-400 flex items-center gap-2">
                 <i className="ri-time-line text-[#C8A35F]"></i>
@@ -75,7 +75,7 @@ export default function Footer() {
         {/* Bottom Section */}
         <div className="pt-8 border-t border-gray-700 flex flex-col lg:flex-row justify-between items-center gap-6">
           <p className="text-gray-400 text-sm">
-            &copy; 2026 도급HR. All rights reserved.
+            &copy; 2026 휴먼플로우. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <div className="flex gap-4">

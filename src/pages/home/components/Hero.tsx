@@ -6,7 +6,7 @@ export default function Hero() {
       <div className="absolute inset-0 w-full h-full">
         <img
           src="/hero.jpg"
-          alt="종합 인력도급 전문기업 도급HR"
+          alt="종합 인력도급 전문기업 휴먼플로우"
           className="w-full h-full object-cover object-top"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/65 via-black/55 to-black/65"></div>
@@ -17,25 +17,28 @@ export default function Hero() {
         <div className="max-w-4xl mx-auto text-center mt-[150px]">
           {/* Main Heading */}
           <h1 className="text-5xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6">
-            최적의 인력 솔루션,<br />도급HR이 함께합니다
+            기업 운영의<br />안정적인 인력파트너
           </h1>
 
           {/* Subheading */}
           <p className="text-xl lg:text-2xl text-gray-200 mb-12 leading-relaxed max-w-3xl mx-auto font-light">
-            제조·건설·물류 전 분야 맞춤형 인력도급 서비스<br className="hidden sm:block" />
-            10년 이상의 전문 노하우로 귀사의 성장을 지원합니다
+            필요한 인력, 필요한 순간 (주)휴먼플로우
           </p>
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-5 mb-20">
-            <a href="https://pf.kakao.com/placeholder" target="_blank" rel="noopener noreferrer" className="bg-[#FEE500] text-[#3C1E1E] px-10 py-5 rounded-full font-semibold text-lg hover:bg-[#F5DC00] transition-all border-2 border-[#FEE500] flex items-center gap-3 whitespace-nowrap cursor-pointer">
-              <i className="ri-kakao-talk-fill text-xl"></i>
+            <a href="https://pf.kakao.com/placeholder" target="_blank" rel="noopener noreferrer" className="bg-[#FEE500] text-[#3C1E1E] px-8 py-4 rounded-full font-semibold text-base hover:bg-[#F5DC00] transition-all border-2 border-[#FEE500] flex items-center gap-3 whitespace-nowrap cursor-pointer">
+              <i className="ri-kakao-talk-fill text-lg"></i>
               카카오톡 문의
+            </a>
+            <a href="#contact" className="bg-white/15 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-base hover:bg-white/25 transition-all border-2 border-white/50 flex items-center gap-3 whitespace-nowrap cursor-pointer">
+              <i className="ri-file-list-3-line text-lg"></i>
+              견적 문의
             </a>
           </div>
 
           {/* Trust Badges */}
-          <div className="flex flex-wrap items-center justify-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6 mt-[50px]">
             <div className="flex items-center gap-3 bg-white/10 backdrop-blur-md px-8 py-4 rounded-2xl border border-white/20 w-[280px]">
               <div className="w-12 h-12 bg-[#C8A35F]/20 rounded-xl flex items-center justify-center flex-shrink-0">
                 <i className="ri-shield-check-line text-2xl text-white"></i>
