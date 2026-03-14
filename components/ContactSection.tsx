@@ -31,7 +31,7 @@ export default function ContactSection() {
   };
 
   return (
-    <section className="section-snap relative w-full bg-gray-950 flex items-center justify-center overflow-y-auto">
+    <section id="contact" className="section-snap relative w-full bg-gray-950 flex items-center justify-center overflow-y-auto">
       <div className="w-full max-w-7xl mx-auto px-8 md:px-12 py-20">
         {/* Header */}
         <motion.div
@@ -84,8 +84,8 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-white font-semibold text-base">오시는 길</p>
-                  <p className="text-white/80 text-lg mt-1">서울특별시 OO구 OO로 000</p>
-                  <p className="text-white/50 text-base">OO빌딩 00층</p>
+                  <p className="text-white/80 text-lg mt-1">경기도 화성시 동탄구 동탄산단6길 15-40</p>
+                  <p className="text-white/50 text-base">3층 302호(방교동)</p>
                 </div>
               </div>
 

@@ -40,7 +40,7 @@ const itemVariants = {
 
 export default function ProblemSection() {
   return (
-    <section className="section-snap relative w-full flex items-center justify-center">
+    <section id="problem" className="section-snap relative w-full flex items-center justify-center">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url(/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg)" }}
@@ -61,7 +61,7 @@ export default function ProblemSection() {
           <h3 className="text-white text-3xl md:text-5xl lg:text-[46px] font-bold leading-snug mb-6">
             휴먼플로우를 선택할까요?
           </h3>
-          <div className="flex flex-wrap justify-center gap-3">
+          <div className="hidden md:flex flex-wrap justify-center gap-3">
             {problems.map(({ icon: Icon, label }) => (
               <div key={label} className="flex items-center gap-2 bg-white/10 rounded-full px-5 py-2.5">
                 <Icon size={19} className="text-white" />

@@ -49,7 +49,7 @@ export default function BusinessSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto" style={{ marginTop: "770px" }}>
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto" style={{ marginTop: "620px" }}>
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -78,7 +78,7 @@ export default function BusinessSection() {
               variants={itemVariants}
               className="flex flex-col items-center gap-3 group cursor-pointer"
             >
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300">
+              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300" style={{ marginTop: "-50px" }}>
                 <Icon
                   size={26}
                   strokeWidth={1.2}

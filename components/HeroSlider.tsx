@@ -80,8 +80,8 @@ export default function HeroSlider() {
             className="absolute inset-0 bg-cover bg-center"
             style={{
               backgroundImage: `url(${slide.bgImage})`,
-              transition: i === current && zooming ? "transform 5s ease-out" : "none",
-              transform: i === current ? (zooming ? "scale(1.15)" : "scale(1)") : i === prev ? "scale(1.15)" : "scale(1)",
+              transition: i === current && zooming ? "transform 4s ease-in-out" : "none",
+              transform: i === current ? (zooming ? "scale(1.12)" : "scale(1)") : i === prev ? "scale(1.12)" : "scale(1)",
             }}
           />
           <div className="absolute inset-0 bg-black/40" />
@@ -116,7 +116,10 @@ export default function HeroSlider() {
               {slides[current].description}
             </p>
 
-            <button className="mt-8 md:mt-10 border border-white/40 text-white px-6 py-3 text-sm flex items-center gap-3 hover:bg-white/10 transition-colors">
+            <button
+              onClick={() => document.getElementById("problem")?.scrollIntoView({ behavior: "smooth" })}
+              className="mt-8 md:mt-10 border border-white/40 text-white px-6 py-3 text-sm flex items-center gap-3 hover:bg-white/10 transition-colors"
+            >
               자세히 보기
               <span className="text-lg">→</span>
             </button>
@@ -139,8 +142,8 @@ export default function HeroSlider() {
               transition={{ duration: 0.6, delay: 0.8 + i * 0.15 }}
               className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-3 md:px-4 md:py-3 text-center"
             >
-              <p className="text-white font-bold text-xs md:text-sm">{card.title}</p>
-              <p className="text-white/50 text-[10px] md:text-xs mt-0.5">{card.desc}</p>
+              <p className="text-white font-bold text-sm md:text-base">{card.title}</p>
+              <p className="text-white/50 text-xs md:text-sm mt-0.5">{card.desc}</p>
             </motion.div>
           ))}
         </div>

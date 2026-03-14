@@ -6,6 +6,7 @@ import RecruitSection from "@/components/RecruitSection";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import FloatingButton from "@/components/FloatingButton";
+import SideNav from "@/components/SideNav";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <ContactSection />
       <Footer />
       <FloatingButton />
+      <SideNav />
     </main>
   );
 }

@@ -4,9 +4,9 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X, Plus } from "lucide-react";
 
 const menuItems = [
-  "회사소개",
-  "사업소개",
-  "채용정보",
+  { label: "회사소개", index: 1 },
+  { label: "사업소개", index: 2 },
+  { label: "문의하기", index: 4 },
 ];
 
 interface NavigationProps {
@@ -51,19 +51,23 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
             <ul className="px-8">
               {menuItems.map((item, i) => (
                 <motion.li
-                  key={item}
+                  key={item.label}
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + i * 0.05 }}
                   className="border-b border-gray-100"
                 >
-                  <a
-                    href="#"
-                    className="flex items-center justify-between py-5 text-gray-800 text-[17px] font-medium hover:text-primary transition-colors"
+                  <button
+                    onClick={() => {
+                      const container = document.querySelector(".fullpage-container");
+                      if (container) container.scrollTo({ top: item.index * window.innerHeight, behavior: "smooth" });
+                      onClose();
+                    }}
+                    className="flex items-center justify-between py-5 text-gray-800 text-[17px] font-medium hover:text-primary transition-colors w-full bg-transparent border-none cursor-pointer text-left"
                   >
-                    {item}
+                    {item.label}
                     <Plus size={18} className="text-gray-400" />
-                  </a>
+                  </button>
                 </motion.li>
               ))}
             </ul>

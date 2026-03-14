@@ -9,11 +9,11 @@ const notoSansKR = Noto_Sans_KR({
 });
 
 export const metadata: Metadata = {
-  title: "제일비엠시",
-  description: "대한민국 HR서비스 리딩 기업 제일비엠시",
+  title: "휴먼플로우",
+  description: "대한민국 HR서비스 리딩 기업 휴먼플로우",
   openGraph: {
-    title: "제일비엠시",
-    description: "사람이 제일입니다 - 대한민국 HR서비스 리딩 기업",
+    title: "휴먼플로우",
+    description: "대한민국 HR의 미래를 만들어가는 종합 인력 솔루션 기업",
   },
 };
 

@@ -29,18 +29,18 @@ export default function Footer() {
           <div>
             <h4 className="text-white font-semibold mb-4">오시는 길</h4>
             <ul className="space-y-2 text-white/50 text-sm">
-              <li>서울특별시 OO구 OO로 000</li>
-              <li>OO빌딩 00층</li>
+              <li>경기도 화성시 동탄구 동탄산단6길 15-40</li>
+              <li>3층 302호(방교동)</li>
             </ul>
           </div>
         </div>
 
         {/* 하단 */}
         <div className="mt-10 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-white/30 text-xs">
-            © 2025 휴먼플로우. All rights reserved.
+          <p className="text-white/30" style={{ fontSize: "14.4px" }}>
+            © 2026 주식회사 휴먼플로우. All rights reserved. | 대표: 신경미 | 사업자등록번호: 286-87-03747
           </p>
-          <div className="flex gap-6 text-white/40 text-xs">
+          <div className="flex gap-6 text-white/40" style={{ fontSize: "14.4px" }}>
             <a href="#" className="hover:text-white transition-colors">개인정보처리방침</a>
             <a href="#" className="hover:text-white transition-colors">이용약관</a>
             <a href="#" className="hover:text-white transition-colors">이메일무단수집거부</a>
