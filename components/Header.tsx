@@ -2,12 +2,13 @@
 
 import { useState } from "react";
 import { Menu } from "lucide-react";
+import Image from "next/image";
 import Navigation from "./Navigation";
 
 const menuItems = [
   { label: "회사소개", index: 1 },
   { label: "사업소개", index: 2 },
-  { label: "문의하기", index: 4 },
+  { label: "문의하기", index: 5 },
 ];
 
 export default function Header() {
@@ -17,9 +18,14 @@ export default function Header() {
     <>
       <header className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-6 md:px-10 py-5">
         {/* Logo */}
-        <span className="text-white text-xl font-bold tracking-wider">
-          휴먼플로우
-        </span>
+        <Image
+          src="/logo-white.png"
+          alt="휴먼플로우"
+          width={180}
+          height={30}
+          className="h-6 md:h-9 w-auto ml-0 md:ml-[100px]"
+          priority
+        />
 
         {/* Desktop Nav */}
         <nav className="hidden lg:flex items-center gap-8" style={{ marginRight: "250px" }}>

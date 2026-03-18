@@ -24,15 +24,15 @@ export default function RecruitSection() {
         viewport={{ once: true, amount: 0.3 }}
         transition={{ duration: 0.7 }}
       >
-        <h2 className="text-white text-2xl md:text-4xl lg:text-[42px] font-bold mb-4 md:whitespace-nowrap">
+        <h2 className="text-white text-xl md:text-4xl lg:text-[42px] font-bold mb-4 md:whitespace-nowrap">
           멈추지 않는 도약, 대한민국 HR의 미래를 씁니다
         </h2>
-        <p className="text-white text-base md:text-lg mt-6 md:mt-8 leading-relaxed max-w-xl mx-auto">
+        <p className="text-white text-xs md:text-lg mt-4 md:mt-8 leading-relaxed max-w-xl mx-auto">
           대한민국 HR의 중심 휴먼플로우, 우리의 미래가 될 당신을 기다립니다.
         </p>
 
         <motion.button
-          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" })}
+          onClick={() => document.getElementById("problem")?.scrollIntoView({ behavior: "smooth" })}
           className="mt-10 md:mt-12 border border-white/50 text-white px-8 py-3.5 text-sm flex items-center gap-3 mx-auto hover:bg-white/10 transition-colors"
           whileHover={{ scale: 1.02 }}
           whileTap={{ scale: 0.98 }}

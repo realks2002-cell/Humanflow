@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const sections = [
   { index: 1, label: "회사소개" },
   { index: 2, label: "사업소개" },
-  { index: 4, label: "문의하기" },
+  { index: 5, label: "문의하기" },
 ];
 
 export default function SideNav() {
@@ -32,6 +32,8 @@ export default function SideNav() {
     container.scrollTo({ top: index * window.innerHeight, behavior: "smooth" });
   };
 
+  const isLightBg = activeSection === 1;
+
   return (
     <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-7">
       {sections.map((section) => (
@@ -43,8 +45,10 @@ export default function SideNav() {
           <span
             className={`text-sm transition-all duration-300 ${
               activeSection === section.index
-                ? "text-white font-semibold"
-                : "text-white/50 group-hover:text-white/80"
+                ? `${isLightBg ? "text-dark" : "text-white"} font-semibold`
+                : isLightBg
+                  ? "text-dark/50 group-hover:text-dark/80"
+                  : "text-white/50 group-hover:text-white/80"
             }`}
           >
             {section.label}
@@ -52,15 +56,17 @@ export default function SideNav() {
           <span
             className={`rounded-full transition-all duration-300 ${
               activeSection === section.index
-                ? "w-4 h-4 border-2 border-primary bg-white"
-                : "w-2.5 h-2.5 bg-white/50 group-hover:bg-white/80"
+                ? `w-4 h-4 border-2 border-primary ${isLightBg ? "bg-dark" : "bg-white"}`
+                : isLightBg
+                  ? "w-2.5 h-2.5 bg-dark/50 group-hover:bg-dark/80"
+                  : "w-2.5 h-2.5 bg-white/50 group-hover:bg-white/80"
             }`}
           />
         </button>
       ))}
 
       <button
-        onClick={() => scrollToSection(4)}
+        onClick={() => scrollToSection(5)}
         className="mt-3 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full px-5 py-2.5 transition-all duration-300 cursor-pointer border-none outline-none"
       >
         Contact Us

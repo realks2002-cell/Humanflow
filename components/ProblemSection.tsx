@@ -45,7 +45,7 @@ export default function ProblemSection() {
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: "url(/the-climate-reality-project-Hb6uWq0i4MI-unsplash.jpg)" }}
       />
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-center" style={{ marginTop: "50px" }}>
 
         <motion.div
@@ -55,10 +55,10 @@ export default function ProblemSection() {
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-primary font-semibold text-lg md:text-xl mb-2">
+          <p className="text-primary font-semibold text-sm md:text-xl mb-2">
             왜 많은 기업이
           </p>
-          <h3 className="text-white text-3xl md:text-5xl lg:text-[46px] font-bold leading-snug mb-6">
+          <h3 className="text-white text-2xl md:text-5xl lg:text-[46px] font-bold leading-snug mb-6">
             휴먼플로우를 선택할까요?
           </h3>
           <div className="hidden md:flex flex-wrap justify-center gap-3">
@@ -82,16 +82,17 @@ export default function ProblemSection() {
             <motion.div
               key={title}
               variants={itemVariants}
-              className="flex items-center gap-5 p-5 md:p-6 rounded-xl bg-black/40 backdrop-blur-sm text-left"
+              className="flex items-center gap-3 md:gap-5 p-0 md:p-6 text-left"
             >
-              <div className="flex-shrink-0 w-14 h-14 rounded-lg bg-white/15 flex items-center justify-center">
-                <Icon size={26} className="text-white" />
+              <div className="flex-shrink-0 w-10 h-10 md:w-14 md:h-14 rounded-lg bg-white/15 flex items-center justify-center">
+                <Icon size={26} className="text-white hidden md:block" />
+                <Icon size={18} className="text-white md:hidden" />
               </div>
               <div>
-                <h4 className="text-white text-lg md:text-xl font-bold">
+                <h4 className="text-white text-sm md:text-xl font-bold">
                   {title}
                 </h4>
-                <p className="text-white/60 text-base md:text-lg mt-0.5">
+                <p className="text-white/60 text-xs md:text-lg mt-0.5">
                   {desc}
                 </p>
               </div>

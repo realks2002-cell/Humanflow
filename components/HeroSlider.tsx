@@ -98,10 +98,10 @@ export default function HeroSlider() {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 1, ease: "easeInOut" }}
           >
-            <p className="text-white/70 text-sm md:text-base tracking-[4px] uppercase mb-4 md:mb-6">
+            <p className="text-white/70 text-xs md:text-base tracking-[4px] uppercase mb-3 md:mb-6">
               {slides[current].subtitle}
             </p>
-            <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2">
+            <h1 className="text-white text-[27px] md:text-6xl lg:text-7xl font-bold leading-tight mb-2">
               {slides[current].title}
               {slides[current].titleHighlight && (
                 <>
@@ -112,7 +112,7 @@ export default function HeroSlider() {
                 </>
               )}
             </h1>
-            <p className="text-white/60 text-base md:text-lg mt-4 md:mt-6 tracking-wide">
+            <p className="text-white/60 text-xs md:text-lg mt-3 md:mt-6 tracking-wide">
               {slides[current].description}
             </p>
 
@@ -128,7 +128,7 @@ export default function HeroSlider() {
       </div>
 
       {/* Cards */}
-      <div className="absolute bottom-[212px] left-0 right-0 z-10 flex justify-center px-6">
+      <div className="absolute bottom-[212px] left-0 right-0 z-10 hidden md:flex justify-center px-6">
         <div className="w-full max-w-[630px] grid grid-cols-3 gap-2 md:gap-3">
           {[
             { title: "인력공급 전문", desc: "검증된 전문 인력" },

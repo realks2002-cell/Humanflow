@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
+import { Phone, Mail, MapPin, MessageCircle, BookOpen } from "lucide-react";
 
 const inquiryTypes = [
   "인력파견",
@@ -21,18 +21,32 @@ export default function ContactSection() {
     type: "",
     content: "",
   });
+  const [submitted, setSubmitted] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        access_key: "df9d78a5-9609-49b6-bc51-a952e75380d7",
+        subject: `[휴먼플로우] ${formData.type} 문의 - ${formData.company}`,
+        ...formData,
+      }),
+    });
+    if (res.ok) {
+      setSubmitted(true);
+      setFormData({ company: "", name: "", phone: "", email: "", type: "", content: "" });
+    }
   };
 
   return (
-    <section id="contact" className="section-snap relative w-full bg-gray-950 flex items-center justify-center overflow-y-auto">
-      <div className="w-full max-w-7xl mx-auto px-8 md:px-12 py-20">
+    <section id="contact" className="section-snap relative w-full bg-gray-950 flex items-start md:items-center justify-center overflow-y-auto">
+      <div className="w-full max-w-7xl mx-auto px-8 md:px-12 py-10 md:py-20">
         {/* Header */}
         <motion.div
           className="text-center mb-12"
@@ -41,8 +55,8 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white text-4xl md:text-6xl font-bold mb-4">문의하기</h2>
-          <p className="text-white/50 text-base md:text-xl">
+          <h2 className="text-white text-2xl md:text-6xl font-bold mb-4 mt-[80px] md:mt-[120px]">문의하기</h2>
+          <p className="text-white/50 text-xs md:text-xl">
             휴먼플로우는 인력을 보내는 회사가 아니라 현장을 안정시키는 파트너입니다
           </p>
         </motion.div>
@@ -54,63 +68,88 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="ml-[30px] md:ml-0"
           >
-            <h3 className="text-white text-2xl font-bold mb-10">연락처 정보</h3>
-            <div className="space-y-8">
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Phone size={24} className="text-primary" />
+            <h3 className="text-white text-sm md:text-2xl font-bold mb-4 md:mb-10">연락처 정보</h3>
+            <div className="space-y-3 md:space-y-8">
+              <div className="flex items-start gap-2 md:gap-5">
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <Phone size={24} className="text-primary hidden md:block" />
+                  <Phone size={14} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-base">전화 문의</p>
-                  <p className="text-white/80 text-xl font-bold mt-1">02-0000-0000</p>
-                  <p className="text-white/40 text-sm mt-1">평일 09:00 - 18:00</p>
+                  <p className="text-white font-semibold text-xs md:text-base">전화 문의</p>
+                  <p className="text-white/80 text-sm md:text-xl font-bold mt-0.5">1644-5393</p>
+                  <p className="text-white/40 text-[10px] md:text-sm mt-0.5">평일 09:00 - 18:00</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Mail size={24} className="text-primary" />
+              <div className="flex items-start gap-2 md:gap-5">
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <Mail size={24} className="text-primary hidden md:block" />
+                  <Mail size={14} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-base">이메일 문의</p>
-                  <p className="text-white/80 text-lg mt-1">placeholder@doguphr.com</p>
+                  <p className="text-white font-semibold text-xs md:text-base">이메일 문의</p>
+                  <p className="text-white/80 text-sm md:text-lg mt-0.5">hmflow@humanflow.co.kr</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={24} className="text-primary" />
+              <div className="flex items-start gap-2 md:gap-5">
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={24} className="text-primary hidden md:block" />
+                  <MapPin size={14} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-base">오시는 길</p>
-                  <p className="text-white/80 text-lg mt-1">경기도 화성시 동탄구 동탄산단6길 15-40</p>
-                  <p className="text-white/50 text-base">3층 302호(방교동)</p>
+                  <p className="text-white font-semibold text-xs md:text-base">오시는 길</p>
+                  <p className="text-white/80 text-sm md:text-lg mt-0.5">경기도 화성시 동탄구 동탄산단6길 15-40</p>
+                  <p className="text-white/50 text-xs md:text-base">3층 302호(방교동)</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-5">
-                <div className="w-14 h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle size={24} className="text-primary" />
+              <div className="flex items-start gap-2 md:gap-5">
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle size={24} className="text-primary hidden md:block" />
+                  <MessageCircle size={14} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-base">카카오톡 문의</p>
-                  <a href="#" className="text-primary text-lg font-medium mt-1 inline-block hover:underline">
+                  <p className="text-white font-semibold text-xs md:text-base">카카오톡 문의</p>
+                  <a href="#" className="text-primary text-sm md:text-lg font-medium mt-0.5 inline-block hover:underline">
                     카카오톡으로 문의하기 →
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-2 md:gap-5">
+                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <BookOpen size={24} className="text-primary hidden md:block" />
+                  <BookOpen size={14} className="text-primary md:hidden" />
+                </div>
+                <div>
+                  <p className="text-white font-semibold text-xs md:text-base">네이버 블로그</p>
+                  <a href="https://blog.naver.com/hmflow" target="_blank" rel="noopener noreferrer" className="text-primary text-sm md:text-lg font-medium mt-0.5 inline-block hover:underline">
+                    블로그 바로가기 →
                   </a>
                 </div>
               </div>
             </div>
           </motion.div>
 
-          {/* Right - Form */}
+          {/* Right - Form (desktop only) */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="hidden lg:block"
           >
-            <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 space-y-6">
+            {submitted ? (
+              <div className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 mt-[30px] text-center">
+                <p className="text-white text-2xl font-bold mb-4">문의가 접수되었습니다</p>
+                <p className="text-white/60">빠른 시일 내에 연락드리겠습니다.</p>
+              </div>
+            ) : (
+            <form onSubmit={handleSubmit} className="bg-white/5 border border-white/10 rounded-2xl p-8 md:p-10 space-y-6 mt-[30px]">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div>
                   <label className="text-white/70 text-base font-medium mb-2 block">회사명 *</label>
@@ -198,6 +237,7 @@ export default function ContactSection() {
                 문의 보내기
               </button>
             </form>
+            )}
           </motion.div>
         </div>
       </div>

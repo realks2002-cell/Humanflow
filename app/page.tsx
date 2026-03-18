@@ -1,5 +1,6 @@
 import Header from "@/components/Header";
 import HeroSlider from "@/components/HeroSlider";
+import AboutSection from "@/components/AboutSection";
 import BusinessSection from "@/components/BusinessSection";
 import ProblemSection from "@/components/ProblemSection";
 import RecruitSection from "@/components/RecruitSection";
@@ -13,6 +14,7 @@ export default function Home() {
     <main className="fullpage-container">
       <Header />
       <HeroSlider />
+      <AboutSection />
       <BusinessSection />
       <ProblemSection />
       <RecruitSection />

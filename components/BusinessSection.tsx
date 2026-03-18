@@ -49,24 +49,24 @@ export default function BusinessSection() {
       />
 
       {/* Content */}
-      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto" style={{ marginTop: "620px" }}>
+      <div className="relative z-10 text-center px-6 max-w-5xl mx-auto mt-[350px] md:mt-[620px]">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white text-4xl md:text-5xl lg:text-[50px] font-bold leading-snug">
+          <h2 className="text-white text-3xl md:text-5xl lg:text-[50px] font-bold leading-snug">
             종합 인력 솔루션
           </h2>
-          <p className="text-white/60 text-base md:text-[18px] mt-6 md:mt-8 mb-[30px] leading-relaxed max-w-2xl mx-auto">
+          <p className="text-white/60 text-xs md:text-[18px] mt-4 md:mt-8 mb-[30px] leading-relaxed max-w-2xl mx-auto">
             제조, 건설, 물류 등 다양한 산업 분야에 최적화된 맞춤형 인력도급 서비스를 제공합니다
           </p>
         </motion.div>
 
         {/* Service grid */}
         <motion.div
-          className="grid grid-cols-2 sm:grid-cols-4 gap-x-8 gap-y-10 md:gap-x-16 md:gap-y-12 mt-14 md:mt-20"
+          className="grid grid-cols-4 gap-x-4 md:gap-x-16 gap-y-10 md:gap-y-12 mt-14 md:mt-20"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -78,14 +78,19 @@ export default function BusinessSection() {
               variants={itemVariants}
               className="flex flex-col items-center gap-3 group cursor-pointer"
             >
-              <div className="w-14 h-14 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300" style={{ marginTop: "-50px" }}>
+              <div className="w-11 h-11 md:w-16 md:h-16 rounded-full border border-white/30 flex items-center justify-center group-hover:border-primary group-hover:bg-primary/10 transition-all duration-300" style={{ marginTop: "-50px" }}>
                 <Icon
                   size={26}
                   strokeWidth={1.2}
-                  className="text-white/80 group-hover:text-primary transition-colors duration-300"
+                  className="text-white/80 group-hover:text-primary transition-colors duration-300 hidden md:block"
+                />
+                <Icon
+                  size={20}
+                  strokeWidth={1.2}
+                  className="text-white/80 group-hover:text-primary transition-colors duration-300 md:hidden"
                 />
               </div>
-              <span className="text-white/80 text-sm md:text-[15px] font-medium group-hover:text-primary transition-colors duration-300">
+              <span className="text-white/80 text-xs md:text-[15px] font-medium group-hover:text-primary transition-colors duration-300">
                 {label}
               </span>
             </motion.div>
