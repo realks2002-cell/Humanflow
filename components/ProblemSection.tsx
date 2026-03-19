@@ -61,7 +61,7 @@ export default function ProblemSection() {
         transition={{ duration: 8, ease: "easeOut" }}
       />
       <div className="absolute inset-0 bg-black/50" />
-      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-center" style={{ marginTop: "50px" }}>
+      <div className="relative z-10 w-full max-w-6xl mx-auto px-6 md:px-10 text-center" style={{ marginTop: "100px" }}>
 
         <motion.div
           className="text-center mb-8 md:mb-10"

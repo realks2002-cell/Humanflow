@@ -44,7 +44,7 @@ export default function SideNav() {
           className="flex items-center gap-4 group cursor-pointer bg-transparent border-none outline-none"
         >
           <span
-            className={`text-sm transition-all duration-300 ${
+            className={`text-base transition-all duration-300 ${
               activeSection === section.index
                 ? `${isLightBg ? "text-dark" : "text-white"} font-semibold`
                 : isLightBg
@@ -57,10 +57,10 @@ export default function SideNav() {
           <span
             className={`rounded-full transition-all duration-300 ${
               activeSection === section.index
-                ? `w-4 h-4 border-2 border-primary ${isLightBg ? "bg-dark" : "bg-white"}`
+                ? `w-[18px] h-[18px] border-2 border-primary ${isLightBg ? "bg-dark" : "bg-white"}`
                 : isLightBg
-                  ? "w-2.5 h-2.5 bg-dark/50 group-hover:bg-dark/80"
-                  : "w-2.5 h-2.5 bg-white/50 group-hover:bg-white/80"
+                  ? "w-3 h-3 bg-dark/50 group-hover:bg-dark/80"
+                  : "w-3 h-3 bg-white/50 group-hover:bg-white/80"
             }`}
           />
         </button>
@@ -69,7 +69,7 @@ export default function SideNav() {
       <button
         onClick={() => scrollToSection(5)}
 
-        className="mt-3 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full px-5 py-2.5 transition-all duration-300 cursor-pointer border-none outline-none"
+        className="mt-3 bg-primary hover:bg-primary-dark text-white text-base font-semibold rounded-full px-6 py-3 transition-all duration-300 cursor-pointer border-none outline-none"
       >
         Contact Us
       </button>
