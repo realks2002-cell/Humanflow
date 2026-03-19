@@ -89,7 +89,7 @@ export default function HeroSlider() {
       ))}
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 lg:px-24 max-w-[1400px]">
+      <div className="relative z-10 flex flex-col justify-center h-full px-6 md:px-16 lg:px-24 max-w-[1400px] ml-[30px]">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -127,27 +127,6 @@ export default function HeroSlider() {
         </AnimatePresence>
       </div>
 
-      {/* Cards */}
-      <div className="absolute bottom-[212px] left-0 right-0 z-10 hidden md:flex justify-center px-6">
-        <div className="w-full max-w-[630px] grid grid-cols-3 gap-2 md:gap-3">
-          {[
-            { title: "인력공급 전문", desc: "검증된 전문 인력" },
-            { title: "10년+ 노하우", desc: "업계 최고 경력" },
-            { title: "맞춤형 인력관리", desc: "업종별 최적 솔루션" },
-          ].map((card, i) => (
-            <motion.div
-              key={card.title}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.8 + i * 0.15 }}
-              className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-lg px-3 py-3 md:px-4 md:py-3 text-center"
-            >
-              <p className="text-white font-bold text-sm md:text-base">{card.title}</p>
-              <p className="text-white/50 text-xs md:text-sm mt-0.5">{card.desc}</p>
-            </motion.div>
-          ))}
-        </div>
-      </div>
 
       {/* Bottom area */}
       <div className="absolute bottom-8 left-0 right-0 z-10 flex flex-col items-center gap-6">

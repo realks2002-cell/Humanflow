@@ -4,8 +4,8 @@ import { AnimatePresence, motion } from "framer-motion";
 import { X, Plus } from "lucide-react";
 
 const menuItems = [
-  { label: "회사소개", index: 1 },
-  { label: "사업소개", index: 2 },
+  { label: "회사소개", index: 2 },
+  { label: "사업소개", index: 1 },
   { label: "문의하기", index: 5 },
 ];
 

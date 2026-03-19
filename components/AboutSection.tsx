@@ -1,42 +1,41 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from "next/image";
+import { Users, Zap, ShieldCheck, ClipboardList } from "lucide-react";
+
+const highlights = [
+  { label: "검증된 인력풀", icon: Users },
+  { label: "신속한 대응 시스템", icon: Zap },
+  { label: "안정적 현장운영", icon: ShieldCheck },
+  { label: "체계적 인력관리", icon: ClipboardList },
+];
 
 export default function AboutSection() {
   return (
-    <section className="section-snap relative flex items-center justify-center bg-[#f5f0eb]">
-      <div className="w-full max-w-4xl mx-auto px-6 py-16 text-center">
+    <section className="section-snap relative flex items-center justify-center overflow-hidden">
+      <motion.div
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: "url(/tyler-franta-iusJ25iYu1c-unsplash.jpg)" }}
+        initial={{ scale: 1 }}
+        whileInView={{ scale: 1.15 }}
+        viewport={{ once: false, amount: 0.1 }}
+        transition={{ duration: 8, ease: "easeOut" }}
+      />
+      <div className="absolute inset-0 bg-black/50" />
+
+      <div className="relative z-10 w-full max-w-4xl mx-auto px-6 py-16 text-center -mt-[100px]">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6 }}
         >
-          <span className="text-primary font-semibold text-sm md:text-lg tracking-wide">
+          <span className="text-primary font-semibold text-lg md:text-2xl tracking-wide">
             About
           </span>
-          <h2 className="text-dark text-[22px] md:text-4xl lg:text-[42px] font-bold leading-snug mt-3 mb-8 md:mb-10">
-            &quot;아직도 비싼 아웃소싱 수수료를
-            <br />
-            부담하시나요?&quot;
+          <h2 className="text-white text-[26px] md:text-5xl lg:text-[50px] font-bold leading-snug mt-3 mb-8 md:mb-10">
+            신뢰를 기반으로 흐르는 인력 솔루션
           </h2>
-        </motion.div>
-
-        <motion.div
-          className="relative w-[85%] md:w-full mx-auto aspect-[16/9] mb-12 overflow-hidden rounded-sm"
-          initial={{ opacity: 0, scale: 0.97 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-        >
-          <Image
-            src="/business-meeting-v2.jpeg"
-            alt="비즈니스 미팅"
-            fill
-            className="object-cover grayscale"
-            sizes="(max-width: 768px) 100vw, 800px"
-          />
         </motion.div>
 
         <motion.div
@@ -45,24 +44,37 @@ export default function AboutSection() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <h3 className="text-dark text-base md:text-2xl lg:text-[26px] font-bold leading-relaxed mb-5 whitespace-nowrap">
-            휴먼플로우는 비합리적인
-            <br className="md:hidden" />
-            {" "}아웃소싱 서비스를
+          <p className="text-white/90 text-lg md:text-2xl leading-relaxed max-w-2xl mx-auto mb-6">
+            휴먼플로우는 기업과 사람을 연결하는 전문 아웃소싱 파트너입니다.
             <br className="hidden md:block" />
-            {" "}혁신하기 위해 출발했습니다.
-          </h3>
-          <p className="text-gray-500 text-xs md:text-base leading-relaxed max-w-2xl mx-auto">
-            대다수의 아웃소싱 업체가 서비스 대비 터무니 없이 높은
+            다양한 산업현장의 경험과 체계적인 인력관리 시스템을 바탕으로
             <br className="hidden md:block" />
-            이용수수료를 부과하는 것이 업계의 현실입니다.
-            <br className="hidden md:block" />
-            휴먼플로우는 이용 고객의 마음으로 아웃소싱 서비스를 시작했습니다.
-            <br className="hidden md:block" />
-            고객사와 함께 성장하고, 나아가 기업과 근로자가 행복한
-            <br className="hidden md:block" />
-            미래의 고용시장을 고민하고 있습니다.
+            고객사의 운영 안정성과 효율 향상을 지원합니다.
+            <br />
+            <br />
+            단순 인력 공급이 아닌, 지속 가능한 인력 운영 솔루션을 제공합니다.
           </p>
+          <p className="text-white/70 text-lg md:text-xl mb-10">
+            - 휴먼플로우 임직원 일동 -
+          </p>
+        </motion.div>
+
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-[70px]"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          {highlights.map((item, i) => (
+            <div
+              key={i}
+              className="border border-white/20 rounded-lg py-8 px-3 bg-white/5 backdrop-blur-sm flex flex-col items-center gap-3"
+            >
+              <item.icon className="text-emerald-300 w-7 h-7 md:w-8 md:h-8" />
+              <p className="text-white text-sm md:text-base font-semibold">{item.label}</p>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

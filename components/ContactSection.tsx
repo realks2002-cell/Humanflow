@@ -55,7 +55,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-white text-2xl md:text-6xl font-bold mb-4 mt-[80px] md:mt-[120px]">문의하기</h2>
+          <h2 className="text-white text-[26px] md:text-5xl lg:text-[50px] font-bold mb-4 mt-[80px] md:mt-[120px]">문의하기</h2>
           <p className="text-white/50 text-xs md:text-xl">
             휴먼플로우는 인력을 보내는 회사가 아니라 현장을 안정시키는 파트너입니다
           </p>
@@ -68,66 +68,65 @@ export default function ContactSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="ml-[30px] md:ml-0"
+            className="ml-[60px] md:ml-[30px] mt-[70px]"
           >
-            <h3 className="text-white text-sm md:text-2xl font-bold mb-4 md:mb-10">연락처 정보</h3>
-            <div className="space-y-3 md:space-y-8">
-              <div className="flex items-start gap-2 md:gap-5">
-                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Phone size={24} className="text-primary hidden md:block" />
-                  <Phone size={14} className="text-primary md:hidden" />
+            <div className="space-y-2.5 md:space-y-6">
+              <div className="flex items-start gap-2 md:gap-4">
+                <div className="w-7 h-7 md:w-11 md:h-11 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <Phone size={19} className="text-primary hidden md:block" />
+                  <Phone size={12} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-xs md:text-base">전화 문의</p>
-                  <p className="text-white/80 text-sm md:text-xl font-bold mt-0.5">1644-5393</p>
-                  <p className="text-white/40 text-[10px] md:text-sm mt-0.5">평일 09:00 - 18:00</p>
+                  <p className="text-white font-semibold text-[10px] md:text-sm">전화 문의</p>
+                  <p className="text-white/80 text-xs md:text-lg font-bold mt-0.5">1644-5393</p>
+                  <p className="text-white/40 text-[9px] md:text-xs mt-0.5">평일 09:00 - 18:00</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 md:gap-5">
-                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <Mail size={24} className="text-primary hidden md:block" />
-                  <Mail size={14} className="text-primary md:hidden" />
+              <div className="flex items-start gap-2 md:gap-4">
+                <div className="w-7 h-7 md:w-11 md:h-11 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <Mail size={19} className="text-primary hidden md:block" />
+                  <Mail size={12} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-xs md:text-base">이메일 문의</p>
-                  <p className="text-white/80 text-sm md:text-lg mt-0.5">hmflow@humanflow.co.kr</p>
+                  <p className="text-white font-semibold text-[10px] md:text-sm">이메일 문의</p>
+                  <p className="text-white/80 text-xs md:text-base mt-0.5">hmflow@humanflow.co.kr</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 md:gap-5">
-                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={24} className="text-primary hidden md:block" />
-                  <MapPin size={14} className="text-primary md:hidden" />
+              <div className="flex items-start gap-2 md:gap-4">
+                <div className="w-7 h-7 md:w-11 md:h-11 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <MapPin size={19} className="text-primary hidden md:block" />
+                  <MapPin size={12} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-xs md:text-base">오시는 길</p>
-                  <p className="text-white/80 text-sm md:text-lg mt-0.5">경기도 화성시 동탄구 동탄산단6길 15-40</p>
-                  <p className="text-white/50 text-xs md:text-base">3층 302호(방교동)</p>
+                  <p className="text-white font-semibold text-[10px] md:text-sm">오시는 길</p>
+                  <p className="text-white/80 text-xs md:text-base mt-0.5">경기도 화성시 동탄구 동탄산단6길 15-40</p>
+                  <p className="text-white/50 text-[10px] md:text-sm">3층 302호(방교동)</p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 md:gap-5">
-                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle size={24} className="text-primary hidden md:block" />
-                  <MessageCircle size={14} className="text-primary md:hidden" />
+              <div className="flex items-start gap-2 md:gap-4">
+                <div className="w-7 h-7 md:w-11 md:h-11 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <MessageCircle size={19} className="text-primary hidden md:block" />
+                  <MessageCircle size={12} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-xs md:text-base">카카오톡 문의</p>
-                  <a href="#" className="text-primary text-sm md:text-lg font-medium mt-0.5 inline-block hover:underline">
+                  <p className="text-white font-semibold text-[10px] md:text-sm">카카오톡 문의</p>
+                  <a href="#" className="text-primary text-xs md:text-base font-medium mt-0.5 inline-block hover:underline">
                     카카오톡으로 문의하기 →
                   </a>
                 </div>
               </div>
 
-              <div className="flex items-start gap-2 md:gap-5">
-                <div className="w-8 h-8 md:w-14 md:h-14 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
-                  <BookOpen size={24} className="text-primary hidden md:block" />
-                  <BookOpen size={14} className="text-primary md:hidden" />
+              <div className="flex items-start gap-2 md:gap-4">
+                <div className="w-7 h-7 md:w-11 md:h-11 rounded-lg bg-primary/15 flex items-center justify-center flex-shrink-0">
+                  <BookOpen size={19} className="text-primary hidden md:block" />
+                  <BookOpen size={12} className="text-primary md:hidden" />
                 </div>
                 <div>
-                  <p className="text-white font-semibold text-xs md:text-base">네이버 블로그</p>
-                  <a href="https://blog.naver.com/hmflow" target="_blank" rel="noopener noreferrer" className="text-primary text-sm md:text-lg font-medium mt-0.5 inline-block hover:underline">
+                  <p className="text-white font-semibold text-[10px] md:text-sm">네이버 블로그</p>
+                  <a href="https://blog.naver.com/hmflow" target="_blank" rel="noopener noreferrer" className="text-primary text-xs md:text-base font-medium mt-0.5 inline-block hover:underline">
                     블로그 바로가기 →
                   </a>
                 </div>

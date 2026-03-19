@@ -4,8 +4,9 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { index: 1, label: "회사소개" },
-  { index: 2, label: "사업소개" },
-  { index: 5, label: "문의하기" },
+  { index: 2, label: "서비스안내" },
+  { index: 3, label: "문제해소" },
+  { index: 4, label: "운영개선" },
 ];
 
 export default function SideNav() {
@@ -32,7 +33,7 @@ export default function SideNav() {
     container.scrollTo({ top: index * window.innerHeight, behavior: "smooth" });
   };
 
-  const isLightBg = activeSection === 1;
+  const isLightBg = false;
 
   return (
     <nav className="fixed right-8 top-1/2 -translate-y-1/2 z-40 hidden lg:flex flex-col items-end gap-7">
@@ -67,6 +68,7 @@ export default function SideNav() {
 
       <button
         onClick={() => scrollToSection(5)}
+
         className="mt-3 bg-primary hover:bg-primary-dark text-white text-sm font-semibold rounded-full px-5 py-2.5 transition-all duration-300 cursor-pointer border-none outline-none"
       >
         Contact Us

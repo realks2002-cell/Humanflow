@@ -16,8 +16,8 @@ export default function Home() {
       <HeroSlider />
       <AboutSection />
       <BusinessSection />
-      <ProblemSection />
       <RecruitSection />
+      <ProblemSection />
       <ContactSection />
       <Footer />
       <FloatingButton />
